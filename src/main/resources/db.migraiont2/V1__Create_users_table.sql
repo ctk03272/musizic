@@ -1,0 +1,7 @@
+CREATE TABLE users
+(
+    username VARCHAR(50)  NOT NULL PRIMARY KEY,
+    password VARCHAR(100) NOT NULL,
+    roles    VARCHAR(255) NOT NULL
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4;

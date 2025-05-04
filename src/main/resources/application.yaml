@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  flyway:
+    locations: classpath:db/migration34
+    baseline-on-migrate: true
+
+jwt:
+  secret: VerySecretKeyForJWTThatShouldBeStoredSafelyAndSecret
+  expiration: 864000000  # 10일 (밀리초)
+
+logging:
+  level:
+    com.example: DEBUG
